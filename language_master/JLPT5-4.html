@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>JLPT N5～N4</title>
+</head>
+<body>
+<!-- ヘッダー【始】 -->
+<header class="text-gray-600 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-red-500 rounded-full" viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <a href="index.html"><span class="ml-3 text-xl font-bold">Language Master</span></a>
+      </a>
+      <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+        <a class="mr-5 hover:text-gray-900">Listning</a>
+        <a href="writing.html" class="mr-5 hover:text-gray-900">Writing</a>
+        <a class="mr-5 hover:text-gray-900 text-red-500">Reading</a>
+        <a class="mr-5 hover:text-gray-900">Speaking</a>
+      </nav>
+      <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"><meta name="google-translate-customization" content="xx">言語切り替え</meta>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+<!-- ヘッダー【終】 -->
+
+<!-- メイン【始】 -->
+<div class="sm:flex">
+  <section class="text-center  w-full sm:w-1/4 p-2">
+      <h2>Q What is the Japanese-Language<br>Proficiency Test?</h2><br>
+      <div>
+      <a href="https://www.jlpt.jp/e/about/purpose.html"><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0 w-60"><h2 class="">Objective and History</h2></button></a>
+      <h2 class="font-bold"><a href="https://www.jlpt.jp/e/about/merit.html"><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0 w-60">Advantage of JLPT</button></a></h2>
+     
+      <h2 class="font-bold"><a href="https://www.jlpt.jp/e/about/points.html"><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0 w-60">Four Key Characteristics</button></a></h2>
+      
+      <h2 class="font-bold"><a href="https://www.jlpt.jp/e/about/levelsummary.html"><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0 w-60">N1~N5:Summary</button></a></h2>
+      </div>
+      <h2 class="font-bold"></h2><br>
+      
+      <h2 class="font-bold text-red-500">Test Dates</h2>
+      <ul>
+          <li><p>First test</p><p>Sunday, July2, 2023</p></li><br>
+          <li><p>Second test</p><p>Sunday, December3, 2023</p></li>
+      </ul>
+      
+  </section>
+
+<section class="justify-center h-screen flex flex-wrap w-full p-2 sm:border-t-0 border-t-4 sm:border-l-4 border-slate-200">
+  <ul>
+    <li>
+      <div id="js-slide">
+        <img src="imgs/japan_sp.png" alt="">
+        <img src="imgs/japan_s.png" alt="">
+        <img src="imgs/japan_a.png" alt="">
+        <img src="imgs/japan_w.png" alt="">
+      </div>
+    </li><br>
+
+    <li>
+      <main id>
+        <h1 class="text-center">JLPT5～4</h1><br>
+        <h2 class="text-center font-bold text-2xl" id="question">ここに問題表示</h2><br>
+      
+        <ul class="text-center">
+          <li id="ans1">選択肢1</li>
+          <li id="ans2">選択肢1</li>
+          <li id="ans3">選択肢1</li>
+        </ul><br>
+      
+        <div class="text-center" id="btn-box">
+          <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1" type="button" id="answer1" onClick="answerCheck(1)">回答1</button>
+          <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1" type="button" id="answer2" onClick="answerCheck(2)">回答2</button>
+          <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1" type="button" id="answer3" onClick="answerCheck(3)">回答3</button>
+        </div><br>
+        <div class="text-center">
+          <a href="JLPT5-4.html"><button class="hidden bg-blue-500 hover:bg-blue-700 text-white px-2 py-1" type="button" id="return">最初に戻る</button></a>
+        </div><br>
+      
+        <ul class="text-center" id="list">
+          <!-- ここに追加データが挿入される -->
+        </ul><br>
+      
+
+
+    </li>
+  </ul>
+
+  
+
+  <!-- <div class="h-10">
+<img src="imgs/sakura_2.png" alt="">
+</div> -->
+</section>
+   
+</main>
+<!-- メイン【終】 -->
+
+<!-- jQueryのコードを先に読み込む -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- jsを紐づける☺ -->
+<script src="test_N5-N4.js"></script>
+</body>
+</html>

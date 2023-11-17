@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>writing</title>
+</head>
+<body>
+<!-- ヘッダー【始】 -->
+<header class="text-gray-600 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-red-500 rounded-full" viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <a href="index.html"><span class="ml-3 text-xl font-bold">Language Master</span></a>
+      </a>
+      <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+        <a class="mr-5 hover:text-gray-900">Listning</a>
+        <a class="mr-5 hover:text-gray-900 text-red-500">Writing</a>
+        <a href="JLPT5-4.html" class="mr-5 hover:text-gray-900">Reading</a>
+        <a class="mr-5 hover:text-gray-900">Speaking</a>
+      </nav>
+      <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"><meta name="google-translate-customization" content="xx">言語切り替え</meta>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+<!-- ヘッダー【終】 -->
+
+<!-- メイン【始】 -->
+<div class="sm:flex">
+    <section class="text-center  w-full sm:w-1/4 p-2">
+        <h2>Q What is the Japanese-Language<br>Proficiency Test?</h2><br>
+        <div>
+        <a href="https://www.jlpt.jp/e/about/purpose.html"><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0 w-60"><h2 class="">Objective and History</h2></button></a>
+        <h2 class="font-bold"><a href="https://www.jlpt.jp/e/about/merit.html"><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0 w-60">Advantage of JLPT</button></a></h2>
+       
+        <h2 class="font-bold"><a href="https://www.jlpt.jp/e/about/points.html"><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0 w-60">Four Key Characteristics</button></a></h2>
+        
+        <h2 class="font-bold"><a href="https://www.jlpt.jp/e/about/levelsummary.html"><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0 w-60">N1~N5:Summary</button></a></h2>
+        </div>
+        <h2 class="font-bold"></h2><br>
+        
+        <h2 class="font-bold text-red-500">Test Dates</h2>
+        <ul>
+            <li><p>First test</p><p>Sunday, July2, 2023</p></li><br>
+            <li><p>Second test</p><p>Sunday, December3, 2023</p></li>
+        </ul>
+        
+    </section>
+
+<!-- 右側のメイン -->
+<section class="justify-center h-screen flex flex-wrap w-full p-2 sm:border-t-0 border-t-4 sm:border-l-4 border-slate-200">
+    <ul>
+        <li>
+          <div id="js-slide">
+            <img src="imgs/japan_sp.png" alt="">
+            <img src="imgs/japan_s.png" alt="">
+            <img src="imgs/japan_a.png" alt="">
+            <img src="imgs/japan_w.png" alt="">
+          </div>
+        </li><br>
+
+        <li>
+            <main class="justify-center">
+                <h1 class="text-center">JLPT5～4<br>音声を聞いて質問に回答してください</h1><br>
+                <h2 class="text-center font-bold text-2xl" id="question">ここに問題表示</h2><br>
+                <div class="text-center">
+                    <audio controls src="https://res.cloudinary.com/code-kitchen/video/upload/v1555038697/posts/zk5sldkxuebny7mwlhh3.mp3" class="flex justify-center"></audio>
+                </div>
+                <div class="text-center" id="btn-box">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1" type="button" id="answer1" onClick="answerCheck(1)">回答1</button>
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1" type="button" id="answer2" onClick="answerCheck(2)">回答2</button>
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1" type="button" id="answer3" onClick="answerCheck(3)">回答3</button>
+                </div><br> 
+
+                <h2 class="text-center font-bold text-2xl" id="question">ここに問題表示</h2><br>
+                <div class="text-center">
+                    <audio controls src="https://res.cloudinary.com/code-kitchen/video/upload/v1555038697/posts/zk5sldkxuebny7mwlhh3.mp3" class="flex justify-center"></audio>
+                </div>
+                <div class="text-center" id="btn-box">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1" type="button" id="answer1" onClick="answerCheck(1)">回答1</button>
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1" type="button" id="answer2" onClick="answerCheck(2)">回答2</button>
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1" type="button" id="answer3" onClick="answerCheck(3)">回答3</button>
+                </div><br>
+
+                <h2 class="text-center font-bold text-2xl" id="question">ここに問題表示</h2><br>
+                <div class="text-center">
+                    <audio controls src="https://res.cloudinary.com/code-kitchen/video/upload/v1555038697/posts/zk5sldkxuebny7mwlhh3.mp3" class="flex justify-center"></audio>
+                </div>
+                <div class="text-center" id="btn-box">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1" type="button" id="answer1" onClick="answerCheck(1)">回答1</button>
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1" type="button" id="answer2" onClick="answerCheck(2)">回答2</button>
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white px-2 py-1" type="button" id="answer3" onClick="answerCheck(3)">回答3</button>
+                </div> 
+            </main>
+          
+                
+        </li>
+
+
+</section>
+<!-- メイン【終】 -->
+
+<!-- jQueryのコードを先に読み込む -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Firebase -->
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
+    import { getDatabase, ref, push, set, update, onChildAdded, remove, onChildRemoved, onChildChanged } 
+    from "https://www.gstatic.com/firebasejs/10.6.0/firebase-database.js";
+    
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAlREHZI7RJZDDzxFUNWaHcc8WY7ekYtXk",
+      authDomain: "sample-4dfae.firebaseapp.com",
+      projectId: "sample-4dfae",
+      storageBucket: "sample-4dfae.appspot.com",
+      messagingSenderId: "1056760086016",
+      appId: "1:1056760086016:web:8a2afa3f10db6ed170e2e5"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);//firebaseconfigにキー情報が入っているので接続する
+    const db = getDatabase(app);//リアルタイムデータベースにアクセスする
+    const dbRef = ref(db,"chat");//どこの階層にデータを入れるかを確認する,chat/memo1/exsampleとか
+
+    // スライドショー
+const slides = $("#js-slide").find("img");
+const slideLength = slides.length;
+
+let now = 0;
+let next = 1;
+
+const fade = 0;
+const show = 100000;
+
+slides.hide();
+slides.eq(0).show();
+
+const slidesshow = () => {
+
+  slides.eq(now % slideLength).fadeOut(fade).removeClass("zoom");
+  slides.eq(next % slideLength).fadeIn(fade).addClass("zoom");
+
+  now++;
+  next++;
+};
+
+setInterval(slidesshow, show);
+// スライドショー
+
+// クイズのリスト
+    let question =[
+    [
+        "新しい",
+        "あたらしい"
+    ],
+
+    [
+        "わたしの弟",
+        "わたしのおとうと"
+    ],
+
+    [
+        "アントニオ猪木",
+        "アントニオいのき"
+    ],
+
+    [
+        "私の実家は茶釜です",
+        "わたしのじっかはちゃがまです"
+    ],
+
+    [
+        "春風亭ベイブレードです",
+        "しゅんぷうていベイブレードです"
+    ]
+
+];  
+
+var quize = document.getElementById("question");
+
+let correct = 0;
+let quizCnt = 0;//カウント用の変数を作成
+
+function quizeSet(){ //ファンクション作成
+    quize.textContent = question[quizCnt][0];//クイズのクイズカウントの0番目を呼び出す
+}
+
+quizeSet();
+
+// データ登録
+$("#send").on("click",function(){
+    const msg = {
+     uname : $("#uname").val(),//unameの値をとってくる
+     text : "テスト"//textの値に空をいれる
+    }
+    
+
+    // $("#uname").val("");
+    // $("#text").val("");
+
+    if(msg.uname == question[quizCnt][1]){
+        alert("成功！");
+        var music = new Audio("sound/correct001.mp3");
+        music.play();
+        correct++;
+        msg.text="正解"
+        const newPostRef = push(dbRef);//ユニークキーを生成
+        set(newPostRef,msg); //ユニークキーとともにメッセージを送信
+        
+    }else{
+        alert("てへぺろ大魔王");
+        var music = new Audio("sound/bell20.mp3");
+        music.play();
+        msg.text="不正解"
+        const newPostRef = push(dbRef);//ユニークキーを生成
+        set(newPostRef,msg); //ユニークキーとともにメッセージを送信
+    }
+
+    quizCnt++;
+
+    if(quizCnt == question.length){
+        quize.textContent = `正解数は ${correct}/${quizCnt} でした！`;
+
+    }else{
+        quizeSet();
+    }
+
+});
+
+
+
+
+// firebaseに入ったデータをもらい表示
+onChildAdded(dbRef,function (data) {
+    const msg = data.val();//firebaseの関数
+    const key = data.key;//ユニークキーを取得、削除・更新に必須
+    let h = '<p id="'+ key +'">';
+        h += msg.text;
+        h += '<br>';
+        h += '<span contentEditable="true" id="'+ key +'_update">'+ msg.uname+'</span>';
+        h += '<span class ="remove" data-key="'+ key +'">🚮</span>'
+        h += '<span class ="update" data-key="'+ key +'">🆙</span>'
+        h += '<p>';
+        $("#output").prepend(h);
+});
+
+// 削除イベント
+$("#output").on("click", ".remove", function(){
+    const key = $(this).attr("data-key");
+    const remove_item = ref(db,"chat/"+key);
+    remove(remove_item); //Firebaseデータ削除関数
+});
+
+// 更新イベント
+$("#output").on("click",".update",function(){
+    const key =$(this).attr("data-key");
+    update(ref(db,"chat/"+key),{
+        text: $("#"+key+'_update').html()
+        });
+});
+
+// 削除処理がFirebase側で実行されたらイベント発生！
+onChildRemoved(dbRef,(data)=>{
+    $("#" + data.key).remove();
+});
+
+// 更新処理がFirebase側で発生したらイベント発生！
+onChildChanged(dbRef,(data)=>{
+    $("#"+data.key+'_update').html(data.val().text);
+    $("#"+data.key+'_update').fadeOut(800).fadeIn(800);
+});
+</script>
+
+
+
+</body>
+</html>
+
+    
